@@ -19,8 +19,8 @@
   --water2:   #0a3f6e;
   --glow:     #5ec4f0;
   --soft:     #a8d8f0;
-  --text:     #ffffff;
-  --muted:    #ffffff;
+  --text:     #c8e6f5;
+  --muted:    rgba(168,216,240,0.5);
   --accent:   #7fcdee;
   --warm:     #e8c4a0;
   --danger:   #e07878;
@@ -859,7 +859,7 @@ document.getElementById('todayDate').textContent=now.getDate()+' '+months[now.ge
 
 // ── GAUGE ──
 function updateGauge(){
-  const vals=[q1,q2,q3,q4,q5].map(id=>parseInt(document.getElementById(id).value));
+  const vals=['q1','q2','q3','q4','q5'].map(id=>parseInt(document.getElementById(id).value));
   const avg=vals.reduce((a,b)=>a+b,0)/vals.length;
   const reserve=Math.max(0,Math.round((1-avg/10)*100));
   const bar=document.getElementById('reserveBar');
@@ -886,15 +886,16 @@ const results=[
 ];
 
 function calcResult(){
-  const vals=[q1,q2,q3,q4,q5].map(id=>parseInt(document.getElementById(id).value));
+  const vals=['q1','q2','q3','q4','q5'].map(id=>parseInt(document.getElementById(id).value));
   const avg=vals.reduce((a,b)=>a+b,0)/vals.length;
   const r=results.find(x=>avg<=x.max)||results[results.length-1];
   document.getElementById('resultEmoji').textContent=r.emoji;
   document.getElementById('resultLevel').textContent=r.level;
   document.getElementById('resultMsg').textContent=r.msg;
   const panel=document.getElementById('resultPanel');
+  panel.style.display='block';
   panel.classList.add('visible');
-  panel.scrollIntoView({behavior:'smooth',block:'start'});
+  setTimeout(()=>panel.scrollIntoView({behavior:'smooth',block:'start'}),100);
   updateGauge();
 }
 
