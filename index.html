@@ -19,8 +19,8 @@
   --water2:   #0a3f6e;
   --glow:     #5ec4f0;
   --soft:     #a8d8f0;
-  --text:     #ffffff;
-  --muted:    ffffff;
+  --text:     #c8e6f5;
+  --muted:    rgba(168,216,240,0.5);
   --accent:   #7fcdee;
   --warm:     #e8c4a0;
   --danger:   #e07878;
@@ -740,7 +740,7 @@ input[type=range]::-webkit-slider-thumb:hover { transform: scale(1.2); }
     <div class="schema-card" onclick="toggleSchema(this)">
       <p class="schema-q">"Est-ce que cette personne veut réellement changer ?"</p>
       <div class="schema-reveal">
-        Il y a une différence entre quelqu'un qui souffre et quelqu'un qui veut évoluer. Tu peux aimer les deux. Mais tu ne peux porter que la souffrance de l'un — pas faire le travail de l'autre.<br><br>
+        Il y a une différence entre quelqu'un qui souffre et quelqu'un qui veut évoluer. Tu peux aimer les deux. Mais tu ne peux porter que la souffrance de l'un, pas faire le travail de l'autre.<br><br>
         Ce n'est pas de l'abandon de reconnaître ça.
         <span class="schema-tag">Limite saine</span>
       </div>
@@ -759,7 +759,7 @@ input[type=range]::-webkit-slider-thumb:hover { transform: scale(1.2); }
       <p class="schema-q">"Ma valeur dépend-elle de ce que je fais pour les autres ?"</p>
       <div class="schema-reveal">
         Si tu répondais "oui" sans hésiter, c'est une blessure, pas une vérité.<br><br>
-        Tu as une valeur quand tu dors. Quand tu n'es utile à personne. Quand tu existes simplement — sans produire, sans sauver.
+        Tu as une valeur quand tu dors. Quand tu n'es utile à personne. Quand tu existes simplement, sans produire, sans sauver.
         <span class="schema-tag">Valeur intrinsèque</span>
       </div>
     </div>
@@ -768,7 +768,7 @@ input[type=range]::-webkit-slider-thumb:hover { transform: scale(1.2); }
       <p class="schema-q">"Qu'est-ce qui m'arriverait si je laissais quelqu'un tomber ?"</p>
       <div class="schema-reveal">
         Laisse venir la réponse sans la censurer. Qu'est-ce que tu imagines ? Leur colère ? Leur rupture ? Leur disparition ?<br><br>
-        Cette peur est réelle. Elle mérite d'être écoutée — puis questionnée doucement.
+        Cette peur est réelle. Elle mérite d'être écoutée puis questionnée doucement.
         <span class="schema-tag">Explorer</span>
       </div>
     </div>
@@ -842,7 +842,7 @@ const welcomePhrases = [
   "Tu as le droit d'exister, même quand tu n'es utile à personne.",
   "Aimer quelqu'un ne signifie pas devenir sa béquille permanente.",
   "Ta bonté n'est pas une dette envers le monde.",
-  "Prendre soin de toi n'est pas un abandon — c'est une survie."
+  "Prendre soin de toi n'est pas un abandon, c'est une survie."
 ];
 let wIdx=0;
 setInterval(()=>{
@@ -881,7 +881,7 @@ if(stored){ document.getElementById('reserveBar').style.width=stored+'%'; docume
 const results=[
   { max:3,  emoji:'🌿', level:'Espace préservé',    msg:'Tu trouves encore de l\'espace pour toi. Continue à l\'habiter, même doucement.' },
   { max:5,  emoji:'🌊', level:'Légèrement dérivée',  msg:'Tu tiens, mais le courant te pousse. C\'est le bon moment pour revenir à toi avant de t\'éloigner trop.' },
-  { max:7,  emoji:'💧', level:'En surcharge silencieuse', msg:'Tu portes beaucoup sans le dire. Ton corps le sait déjà. Prends une vraie pause — pas pour les autres, pour toi.' },
+  { max:7,  emoji:'💧', level:'En surcharge silencieuse', msg:'Tu portes beaucoup sans le dire. Ton corps le sait déjà. Prends une vraie pause, pas pour les autres, pour toi.' },
   { max:10, emoji:'🌑', level:'À bout de flottaison',  msg:'Tu donnes ce que tu n\'as plus. C\'est urgent, pas dramatique. Dis non. Dors. Mange. Reçois. Tu ne peux pas sauver depuis le fond.' }
 ];
 
@@ -1004,7 +1004,7 @@ const mirrors=[
   "Tu as le droit d'exister, même quand tu n'es utile à personne.",
   "Aimer quelqu'un ne signifie pas devenir sa béquille permanente.",
   "Ta bonté n'est pas une dette envers le monde.",
-  "Prendre soin de toi n'est pas un abandon — c'est une survie.",
+  "Prendre soin de toi n'est pas un abandon, c'est une survie.",
   "Tu peux aimer quelqu'un et ne pas pouvoir le sauver.",
   "Dire non à quelqu'un, c'est parfois dire oui à toi-même.",
   "Tu mérites d'être portée, pas seulement de porter.",
@@ -1012,7 +1012,7 @@ const mirrors=[
   "Ce n'est pas de l'égoïsme. C'est de la respiration.",
   "Tu n'as pas à justifier tes limites à ceux qui les franchissent.",
   "Ta fatigue est une information, pas une faiblesse.",
-  "Être là pour toi est aussi un acte d'amour — pour ceux que tu aimes.",
+  "Être là pour toi est aussi un acte d'amour, pour ceux que tu aimes.",
   "Tu n'avais pas à tout réparer. Tu n'étais qu'un enfant.",
   "Recevoir est aussi une forme de courage.",
   "Tu as le droit d'exister au-delà de ce que tu donnes.",
